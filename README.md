@@ -8,7 +8,11 @@ Use the NeuroLux Bluetooth Installer.msi file for the NeuroLux software installa
 
 *Ensure use of BLE antenna provided with system to boost device connectivity.*
 
-**Having trouble with your devices? Check the device troubleshooting wiki!** https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/wiki/Bluetooth-device-troubleshooting-guide
+**Having trouble with your devices? Check the device troubleshooting wiki!**
+https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/wiki/Bluetooth-device-troubleshooting-guide
+
+**If you discover any bugs, please feel free to post an issue on the issues page** 
+https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/issues
 
 ### Pairing:
 Search for devices, select ‘connect’ to pair with NNV###, EEG###, IMA###, MA###. Select ‘start data stream’ to begin viewing data.
