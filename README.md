@@ -35,13 +35,19 @@ Ctrl+ right click on plot = Y axis zoom out
 ## Analysis
 
 ### First time setup:
-1. Install a distribution of Anaconda following instructions at: https://docs.anaconda.com/free/anaconda/install/windows/
+1. Install a distribution of Anaconda following instructions at: https://www.anaconda.com/docs/getting-started/anaconda/install
    Note: you do not need to check the box to add anaconda to PATH environment variable
 2. Open the freshly installed annaconda navigator and launch Jupyter Notebook from the navigator menu
-3. Navigate to the analysis script in the file browser on the left side of the window and double click to open the file
+3. Navigate to the analysis script (.ipynb) in the file browser on the left side of the window and double click to open the file. Make sure the .py file is in the same directory as the .ipynb file.
+4. Click the fast-forward button at the top of the file to restart the kernel and run the notebook. 
+5. You will be prompted to select the folder containing the .csv files you want to analyze. You can also select a folder containing multiple folders you want to analyze. If you are on a Mac and do not see the folder selection window, you may need to click on a python file in your dock. When selecting the folder, make sure the .csv files contain at least 1 minute of data each. Once selected, the code will execute for up to several minutes.
+6. After running the code, several files will appear in the folder of the original .csv files you selected for analysis. Data is separated into chunks, demarcated by dropouts in device connectivity. Folders named "Chunk_1", "Chunk_2", etc will contain .csv's and images of chunked data. The folder named "Chunk_all" will contain .csv's and images of data from all chunks combined. The .csv ending in "_dropouts" indicated device connectivity rate. 
 
-### Running the Python MA Analysis script:
-1. In the settings cell, set "export_to_csv" and "plot_output" to "True" if you would like .csv's and .png's of the analyzed data, respectively. Select the type of plots you want to output by toggling the plot booleans (plot_accel_x, plot_accel_y, etc). Set "scrolling" to "True" if you would like to zoom in on the data (recommended for verifying proper IMU placement). Adjust "scroll_window" to modify zoom. 
+### Modifying CSV output/Plot output settings:
+1. Install VS Code following instructions at: https://code.visualstudio.com/download
+2. Open the folder containing the .ipynb and .py file. 
+3. In the .py file, you can select the type of plots you want to output by toggling the plot booleans (plot_accel_x, plot_accel_y, etc). Set "scrolling" to "True" if you would like to zoom in on the data (recommended for verifying proper IMU placement). Adjust "scroll_window" to modify zoom. 
+4. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above.
 
 -------------------------------------------------------------------------------------------------
 
@@ -69,8 +75,3 @@ scrolling = True\
 scroll_window = 2\
 
 -------------------------------------------------------------------------------------------------
-
-2. Click the fast-forward button at the top of the file to restart the kernel and run the notebook. 
-3. You will be prompted to select the folder containing the .csv files you want to analyze. When selecting the folder, make sure the .csv files contain at least 1 minute of data each. Once selected, the code will execute for up to several minutes.
-4. After running the code, several files will appear in the folder of the original .csv files you selected for analysis. Data is separated into chunks, demarcated by dropouts in device connectivity. Folders named "Chunk_1", "Chunk_2", etc will contain .csv's and images of chunked data. The folder named "Chunk_all" will contain .csv's and images of data from all chunks combined. The .csv ending in "_dropouts" indicated device connectivity rate. 
-5. To verify the integrity of your data, it is recommended you zoom into the individual HR and RR peaks using the "scrolling" setting. Additionally, an SQI > 0.5 indicates rhythmic heart sound peaks. Low SQI is a sign of improper IMU placement.  
