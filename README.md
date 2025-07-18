@@ -36,42 +36,39 @@ Ctrl+ right click on plot = Y axis zoom out
 
 ### First time setup:
 1. Install a distribution of Anaconda following instructions at: https://www.anaconda.com/docs/getting-started/anaconda/install
-   Note: you do not need to check the box to add anaconda to PATH environment variable
-2. Open the freshly installed annaconda navigator and launch Jupyter Notebook from the navigator menu
-3. Navigate to the analysis script (.ipynb) in the file browser on the left side of the window and double click to open the file. Make sure the .py file is in the same directory as the .ipynb file.
-4. Click the fast-forward button at the top of the file to restart the kernel and run the notebook. 
-5. You will be prompted to select the folder containing the .csv files you want to analyze. You can also select a folder containing multiple folders you want to analyze. If you are on a Mac and do not see the folder selection window, you may need to click on a python file in your dock. When selecting the folder, make sure the .csv files contain at least 1 minute of data each. Once selected, the code will execute for up to several minutes.
-6. After running the code, several files will appear in the folder of the original .csv files you selected for analysis. Data is separated into chunks, demarcated by dropouts in device connectivity. Folders named "Chunk_1", "Chunk_2", etc will contain .csv's and images of chunked data. The folder named "Chunk_all" will contain .csv's and images of data from all chunks combined. The .csv ending in "_dropouts" indicated device connectivity rate. 
+   Note: you do not need to check the box to add anaconda to PATH environment variable.
+2. Open the freshly installed annaconda navigator and launch Jupyter Notebook from the navigator menu.
+3. Download and extract the nVital analysis .zip folder.
+4. In Jupyter Notebook, navigate to the extracted analysis folder. Double click the .ipynb file inside to open it. Make sure the .py file is in the same directory as the .ipynb file.
+5. Click the fast-forward button at the top of the file to restart the kernel and run the notebook. 
+6. You will be prompted to select the folder containing the .csv files you want to analyze. You can also select a folder containing multiple folders you want to analyze. If you are on a Mac and do not see the folder selection window, you may need to click on a python file in your dock. When selecting the folder, make sure the .csv files contain at least 1 minute of data each. Once selected, the code will execute for up to several minutes.
+7. After running the code, several files will appear in the folder of the original .csv files you selected for analysis. Data is separated into chunks, demarcated by dropouts in device connectivity. Folders named "chunk_0", "chunk_1", etc will contain chunked data. The folder named "chunk_all" will contain data from all chunks combined. The .csv ending in "_dropouts" indicates device connectivity rate. 
 
 ### Modifying CSV output/Plot output settings:
-1. Install VS Code following instructions at: https://code.visualstudio.com/download
-2. Open the folder containing the .ipynb and .py file. 
-3. In the .py file, you can select the type of plots you want to output by toggling the plot booleans (plot_accel_x, plot_accel_y, etc). Set "scrolling" to "True" if you would like to zoom in on the data (recommended for verifying proper IMU placement). Adjust "scroll_window" to modify zoom. 
-4. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above.
+1. You can open the .py file in jupyter notebook to modify the plot settings.
+2. You can select the type of plots you want to output by toggling the plot booleans (plot_accel_x, plot_accel_y, etc).
+3. If using the respiratory envelope method for respiratory rate analysis, make sure to set the following to 'True' to see the lung sound: plot_hs_sh_filtered, plot_resp_sig_prefilt, use_hs_to_calculate_RR, overlay_resp_sig_prefilt_w_hs
+4. In the .py file, you can change your parameters such as HR/RR window size (vital_w), HR/RR window overlap (vital_ovlp), expected respiratory range frequency (resp_freq), and respiratory peak detection parameters (resp_pk_dist, resp_pk_prom, etc.).
+5. In the .py file, you can set the 'batch_process' parameter to 'True' to analyze multiple files at once. Ensure that you select the parent directory containing the various device directories when running the application.
+6. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above.
+
+### Navigating and saving time plots:
+1. Once open in a browser tab, the time plots have a legend on the far right side. Click the button for horizontal and vertical zoom, then hover over the graph and scroll. Drag the plot to pan. 
+2. To save the time plot, you will need to screenshot the graph, since the plot renderer does not support multi-plot PNG exports. 
+3. If you closed the time plot and would like to view it again, simply run the cell labeled "Export time chunks for combined plots". You will be prompted to select the folder containing your data. 
+4. If you get this error: "Only one usage of each socket address (protocol/network address/port) is normally permitted", first find the port your browser tried opening (it should be in the jupyter notebook printout). Then run the following command in Powershell (Windows) or Terminal (Mac): "netstat -ano | findstr :5005". Change the port number in the command accordingly. You will then see 1 or more 5-digit numbers next to the port number. Based on the 5-digit number, you will run this command: "taskkill /pid 27628 /F" (if the number is '27628'). Then, go back to your Jupyter notebook and try running your code again (by clicking the 'fast-forward' button). 
+
+### Saving radar plots:
+1. To save the radar plots, navigate to their location in the jupyter notebook (.ipynb file). You can click on a button next to the radar plot to save it. 
+2. If you closed the radar plot and would like to view it again, simply run the cell labeled "Export radar plots for all data". You will be prompted to select the folder containing your data. 
 
 -------------------------------------------------------------------------------------------------
 
-### Recommended settings for viewing overall data (no zoom):
+### Recommended settings for viewing overall data:
 plot_temperature = True\
 plot_activity = True\
 plot_HR = True\
 plot_SQI = True\
-use_hs_to_calculate_RR = True\
 use_shannon_peaks_only_to_calculate_resp_env = True\
 plot_RR = True\
-
--------------------------------------------------------------------------------------------------
-
-### Recommended settings for viewing individual HR and RR peaks (with zoom):
-plot_hs_sh_raw = True\
-plot_hs_sh_filtered = True\
-plot_HR_peaks = True\
-use_hs_to_calculate_RR = True\
-use_shannon_peaks_only_to_calculate_resp_env = True\
-plot_resp_sig = True\
-plot_RR_peaks = True\
-
-scrolling = True\
-scroll_window = 2\
-
--------------------------------------------------------------------------------------------------
+plot_SR = True\
