@@ -71,4 +71,11 @@ plot_HR = True\
 plot_SQI = True\
 use_shannon_peaks_only_to_calculate_resp_env = True\
 plot_RR = True\
-plot_SR = True\
+plot_SR = True
+
+### Recommended settings for verifying good device placement (zoom to see shannon peaks):
+plot_HR:bool = True\
+plot_SQI:bool = True\
+use_shannon_peaks_only_to_calculate_resp_env = True\
+plot_resp_sig = True\
+plot_RR_peaks = True
