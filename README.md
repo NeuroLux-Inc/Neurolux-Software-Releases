@@ -1,10 +1,10 @@
 # NeuroLux Software
-## NeuroLux Bluetooth software installation:
+## NeuroLux Wireless software installation:
 All latest software can be found under Releases at https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/releases/latest
 
 NeuroLux recommends users employ the latest release of the acquisition software!
 
-Use the NeuroLux Bluetooth Installer.msi file for the NeuroLux software installation. This is the only file you will need to get started with your Bluetooth-enabled Neurolux devices. Install on a computer with a dedicated graphics card for optimal performance. A shortcut to the application folder will be found on your desktop.
+Use the NeuroLux Bluetooth Installer.msi file for the NeuroLux software installation. This is the only file you will need to get started with your wirelesly controlled Neurolux devices. Install on a computer with a dedicated graphics card for optimal performance. A shortcut to the application folder will be found on your desktop.
 
 *Ensure use of BLE antenna provided with system to boost device connectivity.*
 
