@@ -1,5 +1,5 @@
 # NeuroLux Software
-## NeuroLux Wireless software installation:
+## NeuroLux wireless software installation:
 All latest software can be found under Releases at https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/releases/latest
 
 NeuroLux recommends users employ the latest release of the acquisition software!
