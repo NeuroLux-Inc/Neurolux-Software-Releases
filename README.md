@@ -77,21 +77,3 @@ Inside the "chunk_all" folder you will find several CSVs with analyzed data. The
 ### Saving radar plots:
 1. To save the radar plots, navigate to their location in the jupyter notebook (.ipynb file). You can click on a button next to the radar plot to save it. 
 2. If you closed the radar plot and would like to view it again, simply restart the kernel (click the "Kernel" button at the top, then click the "Restart" button) and run the cell labeled "Export radar plots for all data". You will be prompted to select the folder containing your data. 
-
--------------------------------------------------------------------------------------------------
-
-### Recommended settings for viewing overall data:
-plot_temperature = True\
-plot_activity = True\
-plot_HR = True\
-plot_SQI = True\
-use_shannon_peaks_only_to_calculate_resp_env = True\
-plot_RR = True\
-plot_SR = True
-
-### Recommended settings for verifying good device placement (zoom to see shannon peaks):
-plot_HR:bool = True\
-plot_SQI:bool = True\
-use_shannon_peaks_only_to_calculate_resp_env = True\
-plot_resp_sig = True\
-plot_RR_peaks = True
