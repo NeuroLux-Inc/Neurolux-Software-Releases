@@ -46,11 +46,12 @@ Ctrl+ right click on plot = Y axis zoom out
 
 ### Modifying CSV output/Plot output settings:
 1. You can open the .py file in jupyter notebook to modify the plot settings.
-2. You can select the type of plots you want to output by toggling the plot booleans (plot_accel_x, plot_accel_y, etc).
-3. If using the respiratory envelope method for respiratory rate analysis, make sure to set the following to 'True' to see the lung sound: plot_hs_sh_filtered, plot_resp_sig_prefilt, use_hs_to_calculate_RR, overlay_resp_sig_prefilt_w_hs
-4. In the .py file, you can change your parameters such as HR/RR window size (vital_w), HR/RR window overlap (vital_ovlp), expected respiratory range frequency (resp_freq), and respiratory peak detection parameters (resp_pk_dist, resp_pk_prom, etc.).
-5. In the .py file, you can set the 'batch_process' parameter to 'True' to analyze multiple files at once. Ensure that you select the parent directory containing the various device directories when running the application.
-6. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above in the "First time setup" section.
+2. You can select the type of plots you want to output by toggling the "plotPresets" class (raw_data_preset, vitals_preset, etc). Raw data preset will show X, Y, Z, temperature, and sample rate. Vitals preset will show HR, RR, SQI, activity, and temperature. Filtered waveforms preset will show heart sound and lung sound. 
+3. If you would like to view a specific combination of graphs, set "custom_preset" in "plotPresets" to "True", and set the data you want to see in "customPlotOptions", such as "plot_accel_x", to "True". 
+4. If you want to use the respiratory envelope method for respiratory rate analysis, make sure to set the following to 'True' to see the lung sound: plot_hs_sh_filtered, plot_resp_sig_prefilt, use_hs_to_calculate_RR, overlay_resp_sig_prefilt_w_hs
+5. In the .py file, you can change your parameters such as HR/RR window size (vital_w), HR/RR window overlap (vital_ovlp), expected respiratory range frequency (resp_freq), and respiratory peak detection parameters (resp_pk_dist, resp_pk_prom, etc.).
+6. In the .py file, you can set the 'batch_process' parameter to 'True' to analyze multiple files at once. Ensure that you select the parent directory containing the various device directories when running the application.
+7. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above in the "First time setup" section.
 
 ### Understanding CSV outputs:
 Inside the "chunk_all" folder you will find several CSVs with analyzed data. These include:
