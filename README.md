@@ -60,11 +60,11 @@ Inside the "chunk_all" folder you will find several CSVs with analyzed data. The
    3. CSV ending in "cardiac_1": contains "Time (s)", "Heart Sound (a.u.)", and "Filtered Heart Sound (a.u.)" columns.
    4. CSV ending in "cardiac_2": contains "Time (s)", "Shannon Envelope (a.u.)", and "Length Transform (a.u.)" columns.
    5. CSV ending in "cardiac_3": contains "Time (s), "Heart Rate (bpm)",  and "SQI (a.u.)" columns.
-   6. CSV ending in "cardiac_4": contains "Time (s)" and "Shannon Envelope Amplitude (a.u.)" columns.
+   6. CSV ending in "cardiac_4": contains "Time (s)" and "Shannon Envelope Amplitude (a.u.)" columns. These are the peaks for the corresponding heart sound.
    7. CSV ending in "events": contains "Time (s)" and "Event" columns.
    8. CSV ending in "respiratory_1": contains "Time (s)", "Respiratory Signal (a.u.)", and "Filtered Respiratory Signal (a.u.)" columns.
    9. CSV ending in "respiratory_2": contains "Time (s)" and "Respiratory Rate (brpm)" columns.
-   10. CSV ending in "respiratory_3": contains "Time (s)" and "Filtered Respiratory Signal Amplitude (a.u.)" columns.
+   10. CSV ending in "respiratory_3": contains "Time (s)" and "Filtered Respiratory Signal Amplitude (a.u.)" columns. These are the peaks for the corresponding lung sound.
    11. CSV ending in "sample_rate": contains "Time (s)" and "Sample Rate (Hz)" columns. 
    12. CSV ending in "temperature": contains "Time (s)" and "Temperature (C)" columns.
    
