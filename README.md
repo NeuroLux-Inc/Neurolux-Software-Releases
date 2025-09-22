@@ -55,12 +55,12 @@ Ctrl+ right click on plot = Y axis zoom out
 ### Navigating and saving time plots:
 1. Once open in a browser tab, the time plots have a legend on the far right side. Click the button for horizontal and vertical zoom, then hover over the graph and scroll. Drag the plot to pan. 
 2. To save the time plot, you will need to screenshot the graph, since the plot renderer does not support multi-plot PNG exports. 
-3. If you closed the time plot and would like to view it again, simply restart the kernel and run the cell labeled "Export time chunks for combined plots". You will be prompted to select the folder containing your data. 
+3. If you closed the time plot and would like to view it again, simply restart the kernel (click the "Kernel" button at the top, then click the "Restart" button) and run the cell labeled "Export time chunks for combined plots". You will be prompted to select the folder containing your data. 
 4. If you get this error: "Only one usage of each socket address (protocol/network address/port) is normally permitted", first find the port your browser tried opening (it should be in the jupyter notebook printout). Then run the following command in the terminal: (Windows): "netstat -ano | findstr :5005". Change the port number in the command accordingly. You will then see 1 or more 5-digit numbers next to the port number. Based on the 5-digit number, you will run this command: "taskkill /pid 27628 /F" (if the number is '27628'); (Mac): run "kill -9 $(lsof -ti :5005)". Then, go back to your Jupyter notebook and try running your code again (by clicking the 'fast-forward' button). 
 
 ### Saving radar plots:
 1. To save the radar plots, navigate to their location in the jupyter notebook (.ipynb file). You can click on a button next to the radar plot to save it. 
-2. If you closed the radar plot and would like to view it again, simply restart the kernel and run the cell labeled "Export radar plots for all data". You will be prompted to select the folder containing your data. 
+2. If you closed the radar plot and would like to view it again, simply restart the kernel (click the "Kernel" button at the top, then click the "Restart" button) and run the cell labeled "Export radar plots for all data". You will be prompted to select the folder containing your data. 
 
 -------------------------------------------------------------------------------------------------
 
