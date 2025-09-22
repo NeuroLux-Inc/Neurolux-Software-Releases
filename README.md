@@ -50,17 +50,17 @@ Ctrl+ right click on plot = Y axis zoom out
 3. If using the respiratory envelope method for respiratory rate analysis, make sure to set the following to 'True' to see the lung sound: plot_hs_sh_filtered, plot_resp_sig_prefilt, use_hs_to_calculate_RR, overlay_resp_sig_prefilt_w_hs
 4. In the .py file, you can change your parameters such as HR/RR window size (vital_w), HR/RR window overlap (vital_ovlp), expected respiratory range frequency (resp_freq), and respiratory peak detection parameters (resp_pk_dist, resp_pk_prom, etc.).
 5. In the .py file, you can set the 'batch_process' parameter to 'True' to analyze multiple files at once. Ensure that you select the parent directory containing the various device directories when running the application.
-6. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above.
+6. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above in the "First time setup" section.
 
 ### Navigating and saving time plots:
 1. Once open in a browser tab, the time plots have a legend on the far right side. Click the button for horizontal and vertical zoom, then hover over the graph and scroll. Drag the plot to pan. 
 2. To save the time plot, you will need to screenshot the graph, since the plot renderer does not support multi-plot PNG exports. 
-3. If you closed the time plot and would like to view it again, simply run the cell labeled "Export time chunks for combined plots". You will be prompted to select the folder containing your data. 
+3. If you closed the time plot and would like to view it again, simply restart the kernel and run the cell labeled "Export time chunks for combined plots". You will be prompted to select the folder containing your data. 
 4. If you get this error: "Only one usage of each socket address (protocol/network address/port) is normally permitted", first find the port your browser tried opening (it should be in the jupyter notebook printout). Then run the following command in the terminal: (Windows): "netstat -ano | findstr :5005". Change the port number in the command accordingly. You will then see 1 or more 5-digit numbers next to the port number. Based on the 5-digit number, you will run this command: "taskkill /pid 27628 /F" (if the number is '27628'); (Mac): run "kill -9 $(lsof -ti :5005)". Then, go back to your Jupyter notebook and try running your code again (by clicking the 'fast-forward' button). 
 
 ### Saving radar plots:
 1. To save the radar plots, navigate to their location in the jupyter notebook (.ipynb file). You can click on a button next to the radar plot to save it. 
-2. If you closed the radar plot and would like to view it again, simply run the cell labeled "Export radar plots for all data". You will be prompted to select the folder containing your data. 
+2. If you closed the radar plot and would like to view it again, simply restart the kernel and run the cell labeled "Export radar plots for all data". You will be prompted to select the folder containing your data. 
 
 -------------------------------------------------------------------------------------------------
 
