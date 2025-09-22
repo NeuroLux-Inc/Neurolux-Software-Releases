@@ -52,6 +52,21 @@ Ctrl+ right click on plot = Y axis zoom out
 5. In the .py file, you can set the 'batch_process' parameter to 'True' to analyze multiple files at once. Ensure that you select the parent directory containing the various device directories when running the application.
 6. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above in the "First time setup" section.
 
+### Understanding CSV outputs:
+Inside the "chunk_all" folder you will find several CSVs with analyzed data. These include:
+   1. CSV ending in "accel": contains "Time (s)", "Accel X (g)", "Accel Y (g)", "Accel Z (g)", and "Accel Z Clean (g)" columns.
+   2. CSV ending in "activity": contains "Time (s)" and "Physical Activity (a.u.)" columns.
+   3. CSV ending in "cardiac_1": contains "Time (s)", "Heart Sound (a.u.)", and "Filtered Heart Sound (a.u.)" columns.
+   4. CSV ending in "cardiac_2": contains "Time (s)", "Shannon Envelope (a.u.)", and "Length Transform (a.u.)" columns.
+   5. CSV ending in "cardiac_3": contains "Time (s), "Heart Rate (bpm)",  and "SQI (a.u.)" columns.
+   6. CSV ending in "cardiac_4": contains "Time (s)" and "Shannon Envelope Amplitude (a.u.)" columns.
+   7. CSV ending in "events": contains "Time (s)" and "Event" columns.
+   8. CSV ending in "respiratory_1": contains "Time (s)", "Respiratory Signal (a.u.)", and "Filtered Respiratory Signal (a.u.)" columns.
+   9. CSV ending in "respiratory_2": contains "Time (s)" and "Respiratory Rate (brpm)" columns.
+   10. CSV ending in "respiratory_3": contains "Time (s)" and "Filtered Respiratory Signal Amplitude (a.u.)" columns.
+   11. CSV ending in "sample_rate": contains "Time (s)" and "Sample Rate (Hz)" columns. 
+   12. CSV ending in "temperature": contains "Time (s)" and "Temperature (C)" columns.
+   
 ### Navigating and saving time plots:
 1. Once open in a browser tab, the time plots have a legend on the far right side. Click the button for horizontal and vertical zoom, then hover over the graph and scroll. Drag the plot to pan. 
 2. To save the time plot, you will need to screenshot the graph, since the plot renderer does not support multi-plot PNG exports. 
