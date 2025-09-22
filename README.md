@@ -54,7 +54,7 @@ Ctrl+ right click on plot = Y axis zoom out
 7. After modifying your parameters, save the .py file and run .ipynb in Jupyter Notebook, following the instructions above in the "First time setup" section.
 
 ### Understanding CSV outputs:
-Inside the "chunk_all" folder you will find several CSVs with analyzed data. These include:
+Inside the "chunk_all" folder you will find several CSVs with analyzed data. Similar data for individual chunks can be found in the corresponding chunk folders. These data include:
    1. CSV ending in "accel": contains "Time (s)", "Accel X (g)", "Accel Y (g)", "Accel Z (g)", and "Accel Z Clean (g)" columns.
    2. CSV ending in "activity": contains "Time (s)" and "Physical Activity (a.u.)" columns.
    3. CSV ending in "cardiac_1": contains "Time (s)", "Heart Sound (a.u.)", and "Filtered Heart Sound (a.u.)" columns.
