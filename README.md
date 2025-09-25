@@ -4,7 +4,7 @@ All latest software can be found under Releases at https://github.com/NeuroLux-I
 
 NeuroLux recommends users employ the latest release of the acquisition software!
 
-Use the NeuroLux Bluetooth Installer.msi file for the NeuroLux software installation. This is the only file you will need to get started with your wirelesly controlled Neurolux devices. Install on a computer with a dedicated graphics card for optimal performance. A shortcut to the application folder will be found on your desktop.
+Use the NeuroLux_Bluetooth_Installer_x_x_x.msi file for the NeuroLux software installation. This is the only file you will need to get started with your wirelesly controlled Neurolux devices. Install on a computer with a dedicated graphics card for optimal performance. A shortcut to the application folder will be found on your desktop.
 
 *Ensure use of BLE antenna provided with system to boost device connectivity.*
 
@@ -18,10 +18,10 @@ https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/issues
 Search for devices, select ‘connect’ to pair with NNV###, EEG###, IMA###, MA###. Select ‘start data stream’ to begin viewing data.
 
 ### Data saving:
-‘Begin recording’ will save to a SQLite database. Date in name of file will update on pressing begin ‘Begin recording’.‘New savefile every X sec’ sets how often a new .csv (incrementally numbered) is created on export at end of session. **At end of recording, click 'batch export databases' to select a parent folder to recursively export data from all databases found in folder tree** Click 'batch export single database' to select a single SQLite file to export to .csv. A new db is created each time 'Begin recording' is pressed and for each unique device. Databases can be viewed in a SQLite viewer and manipulated as is. Note that the database needs to be sorted by time when queried, as it is not in order when saved initially. 
+‘Begin recording’ will save to a SQLite database. Date in name of file will update on pressing begin ‘Begin recording’.‘New savefile every X sec’ sets how often a new .csv (incrementally numbered) is created on export at end of session. **At end of recording, click 'batch export databases' to select a parent folder to recursively export data from all databases found in folder tree** Click 'batch export single database' to select a single SQLite file to export to .csv. A new db is created each time 'Begin recording' is pressed and for each unique device. Databases can be viewed in a SQLite viewer and manipulated as is. Note that the database needs to be sorted by time when queried, as it is not in order when saved initially. One such database viewer can be downloaded at the link below: https://sqlitebrowser.org/
 
 ### Event Marking
-Devices will be assigned a local event keyboard shortcut on connect, this shortcut can also be assigned by the user. A global event binding is also able to be assigned.
+Devices will be assigned a local event keyboard shortcut on connect, this shortcut can also be assigned by the user. A global event marking trigger is also assigned to each device (ctrl + g).
 
 ### Arduino Connection
 An Arduino can be used to mark events and start/stop recording over serial communication. Connect to Arduinos by selecting the COM port corresponding to the Arduino in the 'Serial Ports' drop-down menu and selecting connect. By sending a 'g' over serial, a global event will be marked. Sending an 'r' will toggle starting and stopping recording data. Baud rate should be set to 9600.
