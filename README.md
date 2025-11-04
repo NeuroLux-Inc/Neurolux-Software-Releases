@@ -3,6 +3,7 @@
 All latest software can be found under Releases at https://github.com/NeuroLux-Inc/Neurolux-Software-Releases/releases/latest
 
 NeuroLux recommends users employ the latest release of the acquisition software!
+Subscribe for notifications of new releases by selecting Watch -> Custom -> Releases on the software releases homepage
 
 Use the NeuroLux_Bluetooth_Installer_x_x_x.msi file for the NeuroLux software installation. This is the only file you will need to get started with your wirelesly controlled Neurolux devices. Install on a computer with a dedicated graphics card for optimal performance. A shortcut to the application folder will be found on your desktop.
 
